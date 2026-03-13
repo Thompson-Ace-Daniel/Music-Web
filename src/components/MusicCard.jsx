@@ -5,19 +5,12 @@ function MusicCard({
   src,
   songTitle,
   artistName,
-  currentlyPlaying,
-  setCurrentlyPlaying,
+  isPlaying,
+  onToggle,
 }) {
-  const isPlaying = currentlyPlaying === songTitle;
-
-  const handlePlayPause = (e) => {
-    e.stopPropagation();
-    isPlaying ? setCurrentlyPlaying(null) : setCurrentlyPlaying(songTitle);
-  };
-
   return (
     <div
-      onClick={handlePlayPause}
+      onClick={onToggle}
       className={`h-24 flex justify-between w-full items-center rounded-md p-6 border transition-all cursor-pointer ${
         isPlaying
           ? "bg-gray-700/50 border-green-500 shadow-lg shadow-green-500/10"
@@ -37,7 +30,6 @@ function MusicCard({
             src={src}
             alt={songTitle}
           />
-
           {isPlaying && (
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-0.5 px-2">
               <div className="w-1.5 h-3 bg-green-500 animate-bounce"></div>
@@ -62,7 +54,7 @@ function MusicCard({
       </div>
 
       <button
-        className={`p-3 rounded-full transition-all ${isPlaying ? "bg-green-500 text-black" : "bg-white text-black hover:scale-110"}`}
+        className={`p-3 rounded-full transition-all ${isPlaying ? "bg-green-500 text-black" : "bg-white text-black"}`}
       >
         {isPlaying ? (
           <PauseIcon size={20} fill="currentColor" />
