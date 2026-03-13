@@ -37,21 +37,23 @@ function Playlist() {
       src: "/logo.png",
     },
   ]);
+  const [currentlyPlaying, setCurrentlyPlaying] = useState(null);
 
   return (
     <div className="w-full min-h-screen bg-black text-white flex flex-col select-none">
       <Header />
       <div className="p-10 flex flex-col justify-center items-center gap-5">
-        {musicData.map((music, i) => {
-          return (
-            <MusicCard
-              index={i+1}
-              src={music.src}
-              artistName={music.artistName}
-              songTitle={music.songTitle}
-            />
-          );
-        })}
+        {musicData.map((music, i) => (
+          <MusicCard
+            key={music.songTitle}
+            index={i + 1}
+            src={music.src}
+            artistName={music.artistName}
+            songTitle={music.songTitle}
+            currentlyPlaying={currentlyPlaying}
+            setCurrentlyPlaying={setCurrentlyPlaying}
+          />
+        ))}
       </div>
       <Footer />
     </div>

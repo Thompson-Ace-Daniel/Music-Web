@@ -8,13 +8,17 @@ function SplashScreen() {
   useEffect(() => {
     setTimeout(() => {
       navigate("/playlist");
-    }, 5000);
+    }, 3000);
   }, [navigate]);
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center gap-1">
-      <img className="w-fit" src="/logo_t.png" alt="Music App's Logo" />
-      <p className="font-bold text-lg">Welcome to My Music App</p>
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <h1 className="font-bold text-2xl tracking-tighter flex flex-col items-center gap-5">
+        <div className="w-30 h-30 bg-green-500 rounded-full flex items-center justify-center">
+          <div className="w-15 h-15 bg-black rounded-md rotate-45" />
+        </div>
+        <span className="hidden md:block">VibeStream</span>
+      </h1>
     </div>
   );
 }
