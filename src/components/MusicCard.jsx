@@ -1,17 +1,10 @@
 import { PlayIcon, PauseIcon, UserCircle } from "lucide-react";
 
-function MusicCard({
-  index,
-  src,
-  songTitle,
-  artistName,
-  isPlaying,
-  onToggle,
-}) {
+function MusicCard({ index, src, songTitle, artistName, isPlaying, onToggle }) {
   return (
     <div
       onClick={onToggle}
-      className={`h-24 flex justify-between w-full items-center rounded-md p-6 border transition-all cursor-pointer ${
+      className={`h-24 flex justify-between w-full items-center rounded-md p-6 border transition-all duration-300 cursor-pointer ${
         isPlaying
           ? "bg-gray-700/50 border-green-500 shadow-lg shadow-green-500/10"
           : "bg-gray-800 border-white/10 hover:bg-gray-700"
@@ -24,9 +17,12 @@ function MusicCard({
           {index}.
         </span>
 
-        <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-md">
+        {/* IMAGE WITH EQUALIZER OVERLAY */}
+        <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-md bg-gray-900">
           <img
-            className={`w-full h-full object-cover transition-transform duration-500 ${isPlaying ? "scale-110 blur-[1px]" : "scale-100"}`}
+            className={`w-full h-full object-cover transition-transform duration-700 ${
+              isPlaying ? "scale-110 blur-[1px]" : "scale-100"
+            }`}
             src={src}
             alt={songTitle}
           />
@@ -54,12 +50,16 @@ function MusicCard({
       </div>
 
       <button
-        className={`p-3 rounded-full transition-all ${isPlaying ? "bg-green-500 text-black" : "bg-white text-black"}`}
+        className={`p-3 rounded-full transition-all ${
+          isPlaying
+            ? "bg-green-500 text-black scale-110"
+            : "bg-white text-black"
+        }`}
       >
         {isPlaying ? (
-          <PauseIcon size={20} fill="currentColor" />
+          <PauseIcon size={20} fill="black" />
         ) : (
-          <PlayIcon size={20} fill="currentColor" />
+          <PlayIcon size={20} fill="black" />
         )}
       </button>
     </div>
