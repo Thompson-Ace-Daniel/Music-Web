@@ -1,4 +1,4 @@
-import { Search, Bell, User, LayoutGrid, Library } from "lucide-react";
+import { Search, Bell, User, LayoutGrid, Library, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -40,7 +40,7 @@ function Header() {
       </div>
 
       <div className="flex items-center gap-5">
-        <button className="relative text-gray-400 hover:text-white transition-colors">
+        <button className="relative hidden md:block text-gray-400 hover:text-white transition-colors">
           <Bell size={20} />
           <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full border-2 border-black"></span>
         </button>
@@ -56,6 +56,9 @@ function Header() {
             <User size={20} />
           </button>
         </div>
+        <button className="relative md:hidden p-2 bg-white/20 text-gray-400 hover:text-white rounded-full flex items-center justify-center border border-white/10 hover:border-white/40 transition-all">
+          <Menu size={20} />
+        </button>
       </div>
     </header>
   );

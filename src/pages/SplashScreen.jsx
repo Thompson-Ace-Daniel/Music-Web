@@ -7,7 +7,7 @@ function SplashScreen() {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate("/playlist");
+      navigate("/login");
     }, 3000);
   }, [navigate]);
 

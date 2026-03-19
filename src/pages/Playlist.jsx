@@ -18,6 +18,7 @@ function Playlist() {
     { songTitle: "Mockingbird", artistName: "Eminem", src: "/logo.png" },
     { songTitle: "True", artistName: "Yoari", src: "/logo.png" },
     { songTitle: "Jogodo", artistName: "Wizkid", src: "/logo.png" },
+    { songTitle: "Love", artistName: "Burna Boy", src: "/logo.png" }
   ]);
 
   const [currentlyPlaying, setCurrentlyPlaying] = useState(null);

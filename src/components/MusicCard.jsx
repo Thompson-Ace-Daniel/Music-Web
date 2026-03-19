@@ -17,7 +17,6 @@ function MusicCard({ index, src, songTitle, artistName, isPlaying, onToggle }) {
           {index}.
         </span>
 
-        {/* IMAGE WITH EQUALIZER OVERLAY */}
         <div className="relative w-14 h-14 shrink-0 overflow-hidden rounded-md bg-gray-900">
           <img
             className={`w-full h-full object-cover transition-transform duration-700 ${
