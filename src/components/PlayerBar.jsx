@@ -28,7 +28,7 @@ function PlayerBar({
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-xl border-t border-white/5 px-6 py-3 z-50">
+    <div className="fixed md:ml-64 bottom-0 left-0 right-0 bg-zinc-900/95 backdrop-blur-xl border-t border-white/5 px-6 py-3 z-50">
       <div className="absolute top-0 left-0 right-0 -translate-y-1/2 group">
         <input
           type="range"

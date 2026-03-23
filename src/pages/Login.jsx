@@ -71,7 +71,7 @@ function Login() {
           <button
             type="submit"
             className="bg-green-500 hover:bg-green-600 select-none cursor-pointer p-3 rounded font-semibold transition"
-            onClick={() => navigate("/playlist")}
+            onClick={() => navigate("/Library")}
           >
             Login
           </button>

@@ -79,7 +79,7 @@ function SignUp() {
           <button
             type="submit"
             className="bg-green-500 hover:bg-green-600 p-3 rounded font-semibold transition"
-            onClick={() => navigate("/playlist")}
+            onClick={() => navigate("/library")}
           >
             Sign Up
           </button>
@@ -87,7 +87,10 @@ function SignUp() {
 
         <p className="text-center text-sm text-gray-400 mt-6">
           Already have an account?{" "}
-          <Link to={"/login"} className="text-green-500 cursor-pointer hover:underline">
+          <Link
+            to={"/login"}
+            className="text-green-500 cursor-pointer hover:underline"
+          >
             Log in
           </Link>
         </p>

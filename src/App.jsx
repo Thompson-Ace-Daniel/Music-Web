@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import SplashScreen from "./pages/SplashScreen";
-import Playlist from "./pages/Playlist";
+import Library from "./pages/Library";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
@@ -10,7 +10,7 @@ function App() {
       <Route index element={<SplashScreen />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/playlist" element={<Playlist />} />
+      <Route path="/library" element={<Library />} />
     </Routes>
   );
 }

@@ -1,11 +1,11 @@
 import { Search, Bell, User, LayoutGrid, Library, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({sidebarAction}) {
   return (
     <header className="sticky top-0 z-50 w-full h-20 bg-black/80 backdrop-blur-md border-b border-white/10 px-8 flex items-center justify-between">
       <div className="flex items-center gap-8">
-        <h1 className="font-bold text-2xl tracking-tighter flex items-center gap-2">
+        <h1 className="font-bold text-2xl tracking-tighter flex items-center gap-2 md:hidden">
           <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
             <div className="w-4 h-4 bg-black rounded-sm rotate-45" />
           </div>
@@ -19,7 +19,7 @@ function Header() {
           >
             <LayoutGrid size={18} /> Home
           </Link>
-          <Link to="/playlist" className="text-white flex items-center gap-2">
+          <Link to="/library" className="text-white flex items-center gap-2">
             <Library size={18} /> Library
           </Link>
         </nav>
@@ -56,7 +56,7 @@ function Header() {
             <User size={20} />
           </button>
         </div>
-        <button className="relative md:hidden p-2 bg-white/20 text-gray-400 hover:text-white rounded-full flex items-center justify-center border border-white/10 hover:border-white/40 transition-all">
+        <button onClick={sidebarAction} className="relative md:hidden p-2 bg-white/20 text-gray-400 outline-none hover:text-white rounded-full flex items-center justify-center border border-white/10 hover:border-white/40 transition-all">
           <Menu size={20} />
         </button>
       </div>
