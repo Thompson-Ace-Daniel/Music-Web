@@ -40,7 +40,7 @@ function Sidebar({ isOpen }) {
         <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
           <div className="w-4 h-4 bg-black rounded-sm rotate-45" />
         </div>
-        <span>VibeStream</span>
+        <span>Splashify</span>
       </h1>
       {pages.map((btn, i) => {
         return (
